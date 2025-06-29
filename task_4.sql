@@ -1,4 +1,10 @@
--- Query to get full description of the table books
-SELECT COLUMN_NAME, COLUMN_TYPE, IS_NULLABLE, COLUMN_KEY, EXTRA 
+-- Query to get the full description of the books table
+SELECT COLUMN_NAME AS 'Column Name',
+       COLUMN_TYPE AS 'Column Type',
+       IS_NULLABLE AS 'Is Nullable',
+       COLUMN_KEY AS 'Key',
+       EXTRA AS 'Extra'
 FROM INFORMATION_SCHEMA.COLUMNS
-WHERE TABLE_SCHEMA = alx_book_store() AND TABLE_NAME = 'books';
+WHERE TABLE_SCHEMA = 'alx_book_store'
+  AND TABLE_NAME = 'books';
+
